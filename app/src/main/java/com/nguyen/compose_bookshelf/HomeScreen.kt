@@ -70,7 +70,7 @@ fun ResultScreen(
         modifier = modifier.padding(horizontal = 4.dp),
         contentPadding = contentPadding,
     ) {
-        items(items = books, key = { book -> book.id }) { book ->
+        items(items = books, key = { book -> book.id!! }) { book ->
             BookCard(
                 book,
                 modifier = modifier
@@ -90,7 +90,7 @@ fun BookCard(photo: Item, modifier: Modifier = Modifier) {
     ) {
         AsyncImage(
             model = ImageRequest.Builder(context = LocalContext.current)
-                .data(photo.volumeInfo.imageLinks?.thumbnail)
+                .data(photo.volumeInfo?.imageLinks?.thumbnail)
                 .crossfade(true)
                 .build(),
             contentDescription = stringResource(R.string.book_cover),
