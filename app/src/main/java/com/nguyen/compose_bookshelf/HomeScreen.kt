@@ -61,7 +61,7 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
 
 @Composable
 fun ResultScreen(
-    books: List<Item>,
+    books: List<Book>,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
@@ -83,7 +83,7 @@ fun ResultScreen(
 }
 
 @Composable
-fun BookCard(photo: Item, modifier: Modifier = Modifier) {
+fun BookCard(photo: Book, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)

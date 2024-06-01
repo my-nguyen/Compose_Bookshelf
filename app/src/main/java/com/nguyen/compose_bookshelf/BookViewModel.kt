@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 
 sealed interface BookState {
-    data class Success(val books: List<Item>) : BookState
+    data class Success(val books: List<Book>) : BookState
     object Error : BookState
     object Loading : BookState
 }
@@ -27,7 +27,7 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
                 // val query = "flowers+inauthor:keyes"
                 val query = "pride+prejudice"
                 val result = repository.fetchBooks(query)
-                BookState.Success(result.items)
+                BookState.Success(result.items!!)
             } catch (e: IOException) {
                 BookState.Error
             }

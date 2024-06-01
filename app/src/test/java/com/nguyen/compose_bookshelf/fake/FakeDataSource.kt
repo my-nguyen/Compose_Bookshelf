@@ -5,7 +5,7 @@ import com.nguyen.compose_bookshelf.BookData
 import com.nguyen.compose_bookshelf.Epub
 import com.nguyen.compose_bookshelf.ImageLink
 import com.nguyen.compose_bookshelf.IndustryIdentifier
-import com.nguyen.compose_bookshelf.Item
+import com.nguyen.compose_bookshelf.Book
 import com.nguyen.compose_bookshelf.PanelizationSummary
 import com.nguyen.compose_bookshelf.Pdf
 import com.nguyen.compose_bookshelf.ReadingModes
@@ -14,7 +14,7 @@ import com.nguyen.compose_bookshelf.SearchInfo
 import com.nguyen.compose_bookshelf.VolumeInfo
 
 object FakeDataSource {
-    private val book1 = Item(
+    private val book1 = Book(
         kind = "books#volume",
         id = "NRWlitmahXkC",
         etag = "V4Scri+pIps",
@@ -68,7 +68,7 @@ object FakeDataSource {
             textSnippet = "The compelling story of Charlie Gordon, willing victim of a strange experiment - a moron, a genius, a man in search of himself."
         )
     )
-    private val book2 = Item(
+    private val book2 = Book(
         volumeInfo = VolumeInfo(
             imageLinks = ImageLink(
                 thumbnail = "http://books.google.com/books/content?id=gK98gXR8onwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"

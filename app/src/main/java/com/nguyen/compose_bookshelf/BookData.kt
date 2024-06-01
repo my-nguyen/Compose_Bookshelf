@@ -1,8 +1,8 @@
 package com.nguyen.compose_bookshelf
 
-data class BookData(val kind: String, val totalItems: Int, val items: List<Item>)
+data class BookData(val kind: String? = null, val totalItems: Int? = null, val items: List<Book>? = null)
 
-data class Item(
+data class Book(
     val kind: String? = null,
     val id: String? = null,
     val etag: String? = null,
